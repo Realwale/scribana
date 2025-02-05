@@ -13,11 +13,11 @@ import (
 )
 
 type AuthService struct {
-	db *gorm.DB
+	Db *gorm.DB
 }
 
 func NewAuthService(db *gorm.DB) *AuthService {
-	return &AuthService{db: db}
+	return &AuthService{Db: db}
 }
 
 func (s *AuthService) GenerateToken(user *models.User) (string, error) {
@@ -45,7 +45,7 @@ func (s *AuthService) VerifyPassword(hashedPassword, password string) error {
 
 func (s *AuthService) Authenticate(email, password string) (*models.User, error) {
 	var user models.User
-	if err := s.db.Where("email = ?", email).First(&user).Error; err != nil {
+	if err := s.Db.Where("email = ?", email).First(&user).Error; err != nil {
 		return nil, errors.New("invalid credentials")
 	}
 

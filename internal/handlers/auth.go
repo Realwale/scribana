@@ -57,7 +57,7 @@ func (h *AuthHandler) Register(c *gin.Context) {
 		Role:     models.ReaderRole,
 	}
 
-	if err := h.authService.db.Create(user).Error; err != nil {
+	if err := h.authService.Db.Create(user).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to create user"})
 		return
 	}
