@@ -2,12 +2,13 @@ package services
 
 import (
 	"errors"
+	"gorm.io/gorm"
 	"strconv"
 	"time"
 
+	"github.com/Realwale/scribana/internal/config"
+	"github.com/Realwale/scribana/internal/models"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/yourusername/blog-api/internal/config"
-	"github.com/yourusername/blog-api/internal/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

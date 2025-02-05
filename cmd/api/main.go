@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/Realwale/scribana/internal/handlers"
 	"log"
 	"os"
 	"path/filepath"
@@ -10,12 +11,11 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	_ "github.com/Realwale/blog-api/docs" // Replace 'yourusername' with your actual module name
-	"github.com/Realwale/blog-api/internal/handlers"
-	"github.com/Realwale/blog-api/internal/middleware"
-	"github.com/Realwale/blog-api/internal/models"
-	"github.com/Realwale/blog-api/internal/services"
-	"github.com/Realwale/blog-api/pkg/storage"
+	_ "github.com/Realwale/scribana/docs"
+	"github.com/Realwale/scribana/internal/middleware"
+	"github.com/Realwale/scribana/internal/models"
+	"github.com/Realwale/scribana/internal/services"
+	"github.com/Realwale/scribana/pkg/storage"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )

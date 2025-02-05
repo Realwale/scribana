@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/Realwale/scribana/internal/models"
+	"github.com/Realwale/scribana/internal/services"
 	"github.com/gin-gonic/gin"
-	"github.com/yourusername/blog-api/internal/models"
-	"github.com/yourusername/blog-api/internal/services"
 )
 
 type AuthHandler struct {

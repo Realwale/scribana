@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/Realwale/scribana/internal/config"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/yourusername/blog-api/internal/config"
 )
 
 func AuthMiddleware() gin.HandlerFunc {

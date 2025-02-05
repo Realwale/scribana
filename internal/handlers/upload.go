@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"path/filepath"
 
+	"github.com/Realwale/scribana/pkg/storage"
 	"github.com/gin-gonic/gin"
-	"github.com/yourusername/blog-api/pkg/storage"
 )
 
 type UploadHandler struct {
